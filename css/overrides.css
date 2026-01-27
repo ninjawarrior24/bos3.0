@@ -110,5 +110,48 @@
   }
 }
 
+/* New section: extended human platform with desk blue white background */
+.human-platform-extend{
+  background-image: url("../images/deskbluewhite.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  color: #ffffff !important;
+  padding: 80px 0 !important;
+}
+.human-platform-extend .section-title{color:#ffffff !important}
+.human-platform-extend .section-lead{color:rgba(255,255,255,0.92) !important}
+
+@media (max-width:900px){
+  .human-platform-extend{padding:48px 0 !important}
+  .human-platform-extend .section-title{font-size:32px !important}
+}
+
+/* Get Started section: keep athlete & coach icons side by side on mobile */
+@media (max-width:900px){
+  .gs-icons{flex-direction:row !important;gap:24px !important}
+}
+
+@media (max-width:600px){
+  .gs-icons{flex-direction:row !important;gap:16px !important;justify-content:center !important}
+  .gs-icon{flex:1;max-width:140px}
+}
+
+/* Videos section: keep logos 4 in a row on mobile */
+@media (max-width:900px){
+  .video-logos{display:flex !important;gap:20px !important;flex-wrap:nowrap !important;justify-content:center !important}
+  .video-logos .logo{height:48px !important;flex:0 1 auto !important}
+}
+
+@media (max-width:600px){
+  .video-logos{display:flex !important;gap:12px !important;flex-wrap:nowrap !important;justify-content:center !important}
+  .video-logos .logo{height:40px !important;flex:0 1 auto !important}
+}
+
+@media (max-width:480px){
+  .video-logos{display:flex !important;gap:10px !important;flex-wrap:nowrap !important;justify-content:center !important}
+  .video-logos .logo{height:36px !important;flex:0 1 auto !important}
+}
+
 
 
