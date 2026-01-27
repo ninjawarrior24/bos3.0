@@ -23,9 +23,17 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="BeOne Sports — Mobile computer vision for sports training">
 	<meta property="og:description" content="BeOne Sports provides instant movement insights for athletes and coaches — no sensors required.">
-	<meta property="og:image" content="images/WebApp%20Landing.png">
-	<meta property="og:url" content="/">
-
+	<!-- Inline override to ensure hero background loads after other styles -->
+	<style>
+	  .hero{background-image: url("images/Deskblueyellow.png") !important; background-size:cover !important; background-position:center center !important; background-repeat:no-repeat !important}
+	  @media (max-width:600px){
+	    .hero{background-image: url("images/phoneblueyellow.png") !important}
+	  }
+	</style>
+	
+	<script defer="" src="js/app.min.js"></script>
+	<script defer="" src="js/reveal.js"></script>
+	<link rel="stylesheet" href="css/reveal.css">
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="BeOne Sports — Mobile computer vision for sports training">
@@ -701,6 +709,5 @@
 	<script defer="" src="js/app.min.js"></script>
 	<script defer="" src="js/reveal.js"></script>
 	<link rel="stylesheet" href="css/reveal.css">
-
-
+</body></html>
 </body></html>
