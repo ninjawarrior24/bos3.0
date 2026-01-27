@@ -63,7 +63,7 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;color:#0f1
   - Large visual hero with background image and primary CTA.
 ------------------------------------------------------------------- */
 
-.hero{padding:68px 0 max(192px, var(--slant-height));min-height:416px;background-image: url('../images/bluyel.png');background-position: center right;background-repeat: no-repeat;background-size: cover;background-color:var(--bg);display:flex;align-items:center;position:relative;overflow:visible}
+.hero{padding:68px 0 max(192px, var(--slant-height));min-height:416px;background-image: url('../images/bluyel.png');background-position: center right;background-repeat: no-repeat;background-size: cover;background-color:#000000;display:flex;align-items:center;position:relative;overflow:visible;margin-bottom:120px}
 .hero .hero-inner{position:static;z-index:4;justify-content:flex-start}
 
 /* Simple slanted-to-white overlay applied directly on the hero.
@@ -143,9 +143,8 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;color:#0f1
 .feature h3{margin:10px 0 6px}
 
 /* drakedive section styles */
-.drakedive{background:#ffffff;padding-top:120px;padding-bottom:80px}
-.drakedive .section-title{color:#0b1220;text-align:center}
-.drake-media{display:block;margin-top:28px}
+.drakedive{background:#ffffff;padding-top:0;padding-bottom:80px;position:relative;margin-top:-120px}
+.drakedive .section-title{color:#0b1220;text-align:center;position:relative;z-index:2}
 .drake-image{max-width:100%;height:auto;border-radius:8px;display:block;margin:0 auto}
 .drake-image-wrap{text-align:center}
 .drake-content{text-align:left;margin-top:20px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:28px}
