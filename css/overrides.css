@@ -98,15 +98,15 @@
 
 /* Hero background images: desktop vs mobile */
 .hero{
-  background-image: url("images/Deskblueyellow.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+    background-image: url("images/Deskbluewhite.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 @media (max-width:600px){
   .hero{
-    background-image: url("images/phoneblueyellow.png") !important;
+      background-image: url("images/phonebluewhite.png") !important;
   }
 }
 
