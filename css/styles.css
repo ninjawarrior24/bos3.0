@@ -109,7 +109,7 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;color:#0f1
      bottom is always flush with the hero background bottom */
   height:calc(var(--slant-height) + var(--slant-offset));
   margin-top:0;
-  background:var(--bg);
+  background:#000000;
   box-shadow:0 18px 40px rgba(15,23,42,0.06);
   position:absolute;
   bottom:0;
