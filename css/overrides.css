@@ -110,5 +110,28 @@
   }
 }
 
+/* Human-platform: use white hero-like backgrounds and dark text for readability */
+.human-platform{
+  background-image: url("images/deskbluewhite.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  color: #0b1220 !important;
+}
+.human-platform .section-title,
+.human-platform .hp-list li{
+  color: #0b1220 !important;
+}
+.human-platform .hp-list li:before{
+  background: #d4af37 !important;
+}
+.human-platform .hp-logo img{opacity:1 !important}
+
+@media (max-width:600px){
+  .human-platform{
+    background-image: url("images/phonebluewhite.png") !important;
+  }
+}
+
 
 
