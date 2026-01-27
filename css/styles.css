@@ -782,3 +782,44 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;color:#0f1
     .slant-divider{height:calc(var(--slant-height) + var(--slant-offset));}
   }
 
+/* Override: noticeably smaller logo on narrow mobile screens (half-size) */
+@media (max-width:480px){
+  .brand-logo{height:32px !important}
+}
+
+@media (max-width:360px){
+  .brand-logo{height:28px !important}
+}
+
+/* Ensure smaller logo at narrow breakpoints and lower the promo on mobile */
+@media (max-width:600px){
+  .brand-logo{height:40px !important}
+  /* push the promo further down so it doesn't crowd the header */
+  .promo-banner{
+    position:fixed !important;
+    left:12px !important;
+    top:320px !important; /* lowered more to create clear gap from header */
+    width:260px !important;
+    max-width:70% !important;
+    padding:12px 16px !important;
+    text-align:left !important;
+    border-radius:12px !important;
+    background:rgba(255,255,255,0.96) !important;
+    box-shadow:0 12px 30px rgba(2,6,23,0.12) !important;
+    z-index:200 !important;
+  }
+}
+
+@media (max-width:480px){
+  .brand-logo{height:32px !important}
+  .promo-banner{top:300px !important;width:220px !important}
+  /* when promo is static in other rules, ensure extra margin from header */
+  .promo-banner[position="static"], .promo-banner{margin-top:24px !important}
+}
+
+@media (max-width:360px){
+  .brand-logo{height:28px !important}
+  .promo-banner{top:260px !important;width:200px !important;padding:10px 12px !important}
+}
+
+
