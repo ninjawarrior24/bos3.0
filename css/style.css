@@ -302,6 +302,7 @@ body {
   margin: 0 0 16px;
   font-weight: 600;
   color: #ffffff;
+  mix-blend-mode: screen;
 }
 
 .hero-title .line {
@@ -552,16 +553,6 @@ body {
   margin: 0 auto;
   background: #000;
 }
-
-.ams .section-lead {
-  margin: 12px auto 0;
-  max-width: 720px;
-  text-align: center;
-}
-
-/* ===================================================================
-   7. AMS SECTION
-=================================================================== */
 
 .ams .section-title,
 .ams .section-lead {
@@ -1212,10 +1203,10 @@ body {
     margin-top: 300px;
   }
   .slant-divider {
-    height: 520px;
+    height: 300px;
   }
   :root {
-    --slant-height: 520px;
+    --slant-height: 300px;
   }
   .hero-box {
     left: 8vw;
@@ -1239,10 +1230,10 @@ body {
     margin-top: 260px;
   }
   .slant-divider {
-    height: 480px;
+    height: 250px;
   }
   :root {
-    --slant-height: 480px;
+    --slant-height: 250px;
   }
   .hero-box {
     width: 50%;
@@ -1265,10 +1256,10 @@ body {
     margin-top: 220px;
   }
   .slant-divider {
-    height: 420px;
+    height: 210px;
   }
   :root {
-    --slant-height: 420px;
+    --slant-height: 210px;
   }
   .hero-box {
     width: 60%;
@@ -1444,10 +1435,10 @@ body {
     margin-top: 140px;
   }
   .slant-divider {
-    height: 360px;
+    height: 210px;
   }
   :root {
-    --slant-height: 360px;
+    --slant-height: 210px;
   }
   .hero-box {
     width: 70%;
@@ -1521,6 +1512,7 @@ body {
   .hero-box {
     margin-left: 16px;
     margin-right: 16px;
+    margin-top: 24px;
   }
   .hero-title {
     font-size: 32px;
@@ -1530,10 +1522,10 @@ body {
     margin-top: 80px;
   }
   .slant-divider {
-    height: 800px;
+    height: 210px;
   }
   :root {
-    --slant-height: 800px;
+    --slant-height: 210px;
   }
   .hero-box {
     width: 88%;
@@ -1651,10 +1643,10 @@ body {
     margin-top: 36px;
   }
   .slant-divider {
-    height: 240px;
+    height: 225px;
   }
   :root {
-    --slant-height: 240px;
+    --slant-height: 225px;
   }
   .hero-box {
     position: static;
@@ -1718,10 +1710,10 @@ body {
     margin-top: 24px;
   }
   .slant-divider {
-    height: 180px;
+    height: 200px;
   }
   :root {
-    --slant-height: 180px;
+    --slant-height: 200px;
   }
   .btn {
     padding: 10px 12px;
