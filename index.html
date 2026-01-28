@@ -86,21 +86,23 @@
 </picture>
 </picture>
 			</a>
-			<nav class="nav-links" id="navLinks">
-				<a href="#product">Product</a>
-				<a href="#pricing">Pricing</a>
-				<a href="#docs">Docs</a>
-				<a href="#company">Company</a>
-				<button class="btn btn-ghost">Sign in</button>
-			</nav>
-			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+			<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</div>
+		<nav class="hamburger-menu" id="hamburgerMenu">
+			<a href="#product">Product</a>
+			<a href="#pricing">Pricing</a>
+			<a href="#docs">Docs</a>
+			<a href="#company">Company</a>
+		</nav>
 	</header>
 
 	<!-- Main content begins -->
 	<main>
 		<section class="hero">
-			<div class="promo-banner" role="status" aria-label="Winter discount">25% off Winter Discount! Start now!</div>
 			<div class="container hero-inner">
 				<div class="hero-box">
 					<h1 class="hero-title">
@@ -114,13 +116,13 @@
 				</div>
 				</div>
 			
-				
 			
 			<!-- slanted divider moved inside hero to sit flush with hero bottom -->
 			<div class="slant-divider" aria-hidden="true"></div>
 		</section>
 
 		<section id="drakedive" class="drakedive">
+			<div class="promo-banner" role="status" aria-label="Winter discount">25% off Winter Discount! Start now!</div>
 			<div class="container">
 				<h2 class="section-title">Trusted by the pros, Designed for everyone.</h2>
 
@@ -153,22 +155,24 @@
 </picture>
 					</div>
 					<div class="drake-content">
-						<h3 class="drake-subtitle" aria-label="165+ Million">
-							<span class="drake-char" data-char="1">1</span>
-							<span class="drake-char" data-char="6">6</span>
-							<span class="drake-char" data-char="5">5</span>
-							<span class="drake-char" data-char="+">+</span>
-							<span class="drake-space" data-char=" ">&nbsp;</span>
-							<span class="drake-char" data-char="M">M</span>
-							<span class="drake-char" data-char="i">i</span>
-							<span class="drake-char" data-char="l">l</span>
-							<span class="drake-char" data-char="l">l</span>
-							<span class="drake-char" data-char="i">i</span>
-							<span class="drake-char" data-char="o">o</span>
-							<span class="drake-char" data-char="n">n</span>
-						</h3>
-						<div class="drake-copy-box">
-							<p class="drake-copy">Sports-specific data points from elite athletes</p>
+						<div class="drake-subtitle-wrapper">
+							<h3 class="drake-subtitle" aria-label="165+ Million">
+								<span class="drake-char" data-char="1">1</span>
+								<span class="drake-char" data-char="6">6</span>
+								<span class="drake-char" data-char="5">5</span>
+								<span class="drake-char" data-char="+">+</span>
+								<br>
+								<span class="drake-char" data-char="M">M</span>
+								<span class="drake-char" data-char="i">i</span>
+								<span class="drake-char" data-char="l">l</span>
+								<span class="drake-char" data-char="l">l</span>
+								<span class="drake-char" data-char="i">i</span>
+								<span class="drake-char" data-char="o">o</span>
+								<span class="drake-char" data-char="n">n</span>
+							</h3>
+							<div class="drake-copy-box">
+								<p class="drake-copy">Sports-specific data points from elite athletes</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -262,6 +266,7 @@
 				</div>
 
 					<div class="video-logos">
+						<a href="https://youtube.com/watch?v=tjWoej2fKrA&feature=youtu.be" target="_blank" rel="noopener noreferrer">
 						<picture>
 <source type="image/avif" srcset="images/football.avif">
 <source type="image/webp" srcset="images/football.webp">
@@ -287,31 +292,14 @@
 </picture>
 </picture>
 </picture>
+						</a>
+						<a href="https://youtu.be/WMg5PxdG2EY" target="_blank" rel="noopener noreferrer">
 						<picture>
-<source type="image/avif" srcset="images/basketball.avif">
-<source type="image/webp" srcset="images/basketball.webp">
-<picture>
-<source type="image/avif" srcset="images/basketball.avif">
-<source type="image/webp" srcset="images/basketball.webp">
-<picture>
-<source type="image/avif" srcset="images/basketball.avif">
-<source type="image/webp" srcset="images/basketball.webp">
-<picture>
-<source type="image/avif" srcset="images/basketball.avif">
-<source type="image/webp" srcset="images/basketball.webp">
-<picture>
-<source type="image/avif" srcset="images/basketball.avif">
-<source type="image/webp" srcset="images/basketball.webp">
-<picture>
-<source type="image/avif" srcset="images/basketball.avif">
-<source type="image/webp" srcset="images/basketball.webp">
-<img src="images/basketball.png" alt="Basketball" class="logo" loading="lazy" decoding="async">
+<source type="image/webp" srcset="images/volleyball.webp">
+<img src="images/volleyball.png" alt="Volleyball" class="logo" loading="lazy" decoding="async">
 </picture>
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
+						</a>
+						<a href="https://youtu.be/mPQugqPbdsU" target="_blank" rel="noopener noreferrer">
 						<picture>
 <source type="image/avif" srcset="images/soccer.avif">
 <source type="image/webp" srcset="images/soccer.webp">
@@ -337,6 +325,8 @@
 </picture>
 </picture>
 </picture>
+						</a>
+						<a href="https://youtu.be/szJvklLBwpA" target="_blank" rel="noopener noreferrer">
 						<picture>
 <source type="image/avif" srcset="images/baseball.avif">
 <source type="image/webp" srcset="images/baseball.webp">
@@ -362,6 +352,7 @@
 </picture>
 </picture>
 </picture>
+						</a>
 					</div>
 			</div>
 		</section>
@@ -611,7 +602,7 @@
 		<!-- New: additional human platform section with deskbluewhite background -->
 		<section id="human-platform-extend" class="human-platform human-platform-extend">
 			<div class="container">
-				<h2 class="section-title">The Global Human Movement Platform</h2>
+				<h2 class="section-title">The global human<br>movement<br>platform</h2>
 				<div class="hp-content">
 					<ul class="hp-list">
 						<li>Mobile motion capture, no wearables,sensors or installations</li>
@@ -669,7 +660,8 @@
 		<a class="btn btn-ghost" href="#">Contact sales</a>
 	</div>
 
-	<script defer="" src="js/app.min.js"></script>
-	<script defer="" src="js/reveal.js"></script>
-</body></html>
-</body></html>
+	<script defer src="js/hamburger.js"></script>
+	<script defer src="js/app.min.js"></script>
+	<script defer src="js/reveal.js"></script>
+</body>
+</html>

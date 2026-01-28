@@ -96,35 +96,86 @@ body {
   height: 102px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav .btn-ghost {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: #fff;
-  padding: 8px 12px;
-}
-
-.nav .btn-primary {
-  background: rgba(255, 255, 255, 0.14);
-  color: #fff;
-}
-
 .nav-toggle {
   display: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   background: transparent;
-  border: 0;
-  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  gap: 6px;
+  z-index: 200;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 160px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+  overflow: hidden;
+  z-index: 200;
+}
+
+.hamburger-menu.active {
+  display: block;
+}
+
+.hamburger-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: #0b1220;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-menu a:last-child {
+  border-bottom: none;
+}
+
+.hamburger-menu a:hover {
+  background-color: rgba(99, 102, 255, 0.1);
+}
+
+.hamburger-menu.active {
+  display: block;
 }
 
 /* Buttons */
@@ -156,12 +207,10 @@ body {
 
 /* Promo Banner */
 .promo-banner {
-  position: absolute;
-  top: 140px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
   width: calc(100% - 120px);
   max-width: 900px;
+  margin: 20px auto;
   padding: 10px 24px;
   background: rgba(255, 255, 255, 0.72);
   color: #0b1220;
@@ -344,7 +393,7 @@ body {
 
 .drakedive .section-title {
   color: #000000;
-  text-align: center;
+  text-align: left;
 }
 
 .drakedive p, .drakedive .section-lead, .drake-copy {
@@ -402,7 +451,14 @@ body {
   position: relative;
   line-height: 0.95;
   text-shadow: 0 6px 18px rgba(3, 43, 86, 0.18);
-  letter-spacing: 0.5px;
+  letter-spacing: -1px;
+  display: block;
+}
+
+.drake-subtitle-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .drake-subtitle .drake-char {
@@ -446,8 +502,8 @@ body {
 
 .computers .section-title,
 .computers .section-lead {
-  text-align: center;
-  margin-left: auto;
+  text-align: left;
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -504,6 +560,15 @@ body {
 }
 
 /* ===================================================================
+   7. AMS SECTION
+=================================================================== */
+
+.ams .section-title,
+.ams .section-lead {
+  text-align: left;
+}
+
+/* ===================================================================
    8. VIDEOS SECTION
 =================================================================== */
 
@@ -514,8 +579,8 @@ body {
 
 .videos .section-title,
 .videos .section-lead {
-  text-align: center;
-  margin-left: auto;
+  text-align: left;
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -586,8 +651,8 @@ body {
 
 .get-started .section-title,
 .get-started .section-lead {
-  text-align: center;
-  margin-left: auto;
+  text-align: left;
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -845,15 +910,24 @@ body {
 
 .human-platform-extend {
   background-image: url("../images/deskbluewhite.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
+  background-size: 110% !important;
+  background-position: calc(center - 500px) center !important;
   background-repeat: no-repeat !important;
   color: #ffffff !important;
   padding: 80px 0 !important;
 }
 
 .human-platform-extend .section-title {
-  color: #ffffff !important;
+  color: #032b56 !important;
+  font-weight: 400;
+  text-align: left;
+}
+
+.human-platform-extend .hp-list {
+  text-align: left !important;
+  padding-left: 0 !important;
+  margin-left: -500px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .human-platform-extend .section-lead {
@@ -937,8 +1011,9 @@ body {
 
 .nos-lead {
   max-width: 820px;
-  margin: 0 auto 18px;
+  margin: 0 0 18px;
   color: #475569;
+  text-align: left;
 }
 
 .nos-cta {
@@ -1216,6 +1291,12 @@ body {
   }
   .human-platform-extend {
     padding: 48px 0;
+    background-image: url("../images/phonebluewhite.png") !important;
+    background-size: cover !important;
+    background-position: calc(center - 500px) center !important;
+  }
+  .human-platform-extend .section-title {
+    color: #ffffff !important;
   }
   .human-platform-extend .section-title {
     font-size: 32px;
@@ -1240,33 +1321,6 @@ body {
 }
 
 @media (max-width: 900px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    padding: 12px 20px;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    z-index: 120;
-    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
-  }
-  .nav-links a {
-    display: block;
-    padding: 8px 0;
-    color: #0b1220;
-    text-decoration: none;
-  }
-  .nav-links .btn-ghost,
-  .nav-links .btn-primary {
-    width: 100%;
-  }
   .brand-logo {
     height: 76px;
   }
@@ -1408,6 +1462,9 @@ body {
     padding-bottom: 120px;
     background-position: top center;
     background-size: cover;
+  }
+  .human-platform-extend .hp-list {
+    margin-left: 0 !important;
   }
   .promo-banner {
     top: 80px;
