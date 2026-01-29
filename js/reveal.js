@@ -41,15 +41,16 @@
           obs.unobserve(el);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -25% 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -15% 0px' });
 
     // Reveal any elements already high enough in the viewport so animations
-    // play on first load/refresh. Match the observer's rootMargin (-25% bottom).
-    const triggerY = window.innerHeight * 0.75; // 100% - 25%
+    // play on first load/refresh. Use a more generous trigger for mobile.
+    const isMobile = window.innerWidth < 768;
+    const triggerY = isMobile ? window.innerHeight * 1.15 : window.innerHeight * 0.75;
     nodes.forEach((el, i) => {
       const rect = el.getBoundingClientRect();
       const delay = Math.min(800, i * 40);
-      if(rect.top <= triggerY){
+      if(rect.top <= triggerY && rect.bottom >= -100){
         el.style.transitionDelay = delay + 'ms';
         el.classList.add('is-revealed');
         // don't observe since already revealed
