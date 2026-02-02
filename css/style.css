@@ -26,8 +26,8 @@
 =================================================================== */
 
 :root {
-  --slant-height: 320px;
-  --slant-offset: 120px;
+  --slant-height: 220px;
+  --slant-offset: 80px;
   --accent: #6366ff;
   --muted: #6b7280;
   --bg: #ffffff;  /* ← CHANGE BACKGROUND COLOR HERE */
@@ -123,7 +123,7 @@ body {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -235,23 +235,6 @@ body {
 }
 
 /* Promo Banner */
-.promo-banner {
-  position: static;
-  width: calc(100% - 120px);
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 10px 24px;
-  background: rgba(255, 255, 255, 0.72);
-  color: #0b1220;
-  border-radius: 999px;
-  font-weight: 700;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.08);
-  z-index: 80;
-}
-
 /* ===================================================================
    3. HERO SECTION
 =================================================================== */
@@ -260,9 +243,9 @@ body {
   padding: 68px 0 200px;
   min-height: 416px;
   background-image: url("../images/Deskblueyellow.png");
-  background-position: center right;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-color: #000000;
   display: flex;
   align-items: center;
@@ -306,12 +289,12 @@ body {
   width: calc(50% - 10vw);
   max-width: 720px;
   z-index: 5;
-  background: transparent;
-  padding: 28px;
+  background: transparent;  
   border-radius: 12px;
   max-width: 560px;
   box-shadow: none;
   margin-left: 0;
+  margin-top: 80px;
 }
 
 .hero-box .hero-title {
@@ -327,9 +310,9 @@ body {
 }
 
 .hero-title {
-  font-size: 44px;
+  font-size: 60px;
   margin: 0 0 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
   mix-blend-mode: screen;
 }
@@ -342,6 +325,26 @@ body {
 .hero-title .navy {
   color: #032b56;
   text-shadow: none;
+}
+
+.hero-bubble {
+  width: 210px;
+  padding: 5px 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #032b56;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 140px;
+  left: 10vw;
+  margin-top: 0;
+  z-index: 10;
+  visibility: visible;
 }
 
 .hero-sub {
@@ -417,8 +420,8 @@ body {
 
 .drakedive {
   background: #ffffff;  /* ← CHANGE DRAKEDIVE BACKGROUND HERE */
-  padding-top: 120px;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .drakedive .section-title {
@@ -527,7 +530,7 @@ body {
 
 .computers {
   background: transparent;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .computers .section-title,
@@ -558,7 +561,7 @@ body {
 
 .ams {
   background: #ffffff;
-  padding: 60px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
@@ -594,7 +597,7 @@ body {
 
 .videos {
   background: #ffffff;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .videos .section-title,
@@ -666,7 +669,7 @@ body {
 
 .get-started {
   background: #f8fafb;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .get-started .section-title,
@@ -728,11 +731,11 @@ body {
 
 .slideshow {
   background: #ffffff;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .slideshow .section-title {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .carousel {
@@ -948,7 +951,7 @@ body {
   background-position: calc(center - 500px) center !important;
   background-repeat: no-repeat !important;
   color: #ffffff !important;
-  padding: 80px 0 !important;
+  padding: 60px 0 !important;
 }
 
 .human-platform-extend .section-title {
@@ -974,13 +977,12 @@ body {
 
 .the-nos {
   background: #ffffff;
-  padding: 80px 0 120px;
+  padding: 60px 0 100px;
 }
 
 .the-nos .nos-headings {
   position: relative;
   height: 260px;
-  margin-bottom: 24px;
 }
 
 .nos-layer {
@@ -1246,14 +1248,18 @@ body {
     margin-top: 300px;
   }
   .slant-divider {
-    height: 300px;
+    height: 240px;
   }
   :root {
-    --slant-height: 300px;
+    --slant-height: 240px;
   }
   .hero-box {
     left: 8vw;
     width: 48%;
+  }
+  .hero-bubble {
+    top: 130px;
+    left: 8vw;
   }
 }
 
@@ -1273,13 +1279,16 @@ body {
     margin-top: 260px;
   }
   .slant-divider {
-    height: 250px;
+    height: 200px;
   }
   :root {
-    --slant-height: 250px;
+    --slant-height: 200px;
   }
   .hero-box {
     width: 50%;
+  }
+  .hero-bubble {
+    top: 120px;
   }
 }
 
@@ -1292,20 +1301,23 @@ body {
     min-height: 420px;
   }
   .hero-title {
-    font-size: 48px;
+    font-size: 55px;
     line-height: 1.06;
   }
   .hero-inner {
-    margin-top: 220px;
+    margin-top: 260px;
   }
   .slant-divider {
-    height: 210px;
+    height: 100px;
   }
   :root {
-    --slant-height: 210px;
+    --slant-height: 180px;
   }
   .hero-box {
     width: 60%;
+  }
+  .hero-bubble {
+    top: 110px;
   }
   .videos-grid {
     flex-direction: column;
@@ -1357,43 +1369,31 @@ body {
     height: 76px;
   }
   .hero {
-    padding: 56px 0 150px;
-    min-height: 360px;
+    padding: 56px 0 180px;
+    min-height: 400px;
     background-position: top center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
   .hero-title {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.08;
   }
   .hero-inner {
-    margin-top: 140px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-top: 260px;
   }
   .slant-divider {
-    height: 360px;
-    margin-top: 30px;
+    height: 180px;
   }
   :root {
-    --slant-offset: 300px;
-  }
-  .hero::after {
-    height: calc(var(--slant-height, 160px) + var(--slant-offset));
+    --slant-height: 180px;
   }
   .hero-box {
-    position: static;
-    transform: none;
-    margin: 0;
-    padding: 0 20px 24px 20px;
-    width: 100%;
-    max-width: 720px;
-    text-align: left;
-    align-self: flex-start;
+    width: 65%;
+    left: 6vw;
+  }
+  .hero-bubble {
+    top: 100px;
+    left: 6vw;
   }
   .promo-banner {
     position: static;
@@ -1474,60 +1474,65 @@ body {
     height: 76px;
   }
   .hero {
-    padding: 56px 0 150px;
-    min-height: 360px;
+    padding: 56px 0 180px;
+    min-height: 400px;
   }
   .hero-title {
-    font-size: 40px;
+    font-size: 48px;
     line-height: 1.08;
   }
   .hero-inner {
-    margin-top: 140px;
+    margin-top: 260px;
   }
   .slant-divider {
-    height: 210px;
+    height: 180px;
   }
   :root {
-    --slant-height: 210px;
+    --slant-height: 180px;
   }
   .hero-box {
     width: 70%;
     left: 6vw;
     padding-left: 16px;
   }
+  .hero-bubble {
+    top: 100px;
+    left: 6vw;
+  }
 }
 
 @media (max-width: 700px) {
   .hero {
-    padding-top: 0;
-    padding-bottom: 120px;
+    padding: 48px 0 180px;
+    min-height: 380px;
     background-position: top center;
     background-size: cover;
   }
   .human-platform-extend .hp-list {
     margin-left: 0 !important;
   }
-  .promo-banner {
-    top: 80px;
-  }
   .brand-logo {
     height: 72px;
   }
-  .hero {
-    padding: 48px 0 140px;
-    min-height: 360px;
-  }
   .hero-title {
-    font-size: 34px;
+    font-size: 44px;
   }
   .hero-inner {
-    margin-top: 56px;
+    margin-top: 260px;
   }
   .slant-divider {
-    height: 300px;
+    height: 180px;
   }
   :root {
-    --slant-height: 300px;
+    --slant-height: 180px;
+  }
+  .hero-box {
+    width: 80%;
+    left: 5vw;
+  }
+  .hero-bubble {
+    top: 95px;
+    left: 5vw;
   }
   .promo-banner {
     top: 80px;
@@ -1542,11 +1547,9 @@ body {
   .container,
   .hero,
   .hero-inner,
-  .hero-box,
   .promo-banner {
     box-sizing: border-box;
     max-width: 100%;
-    width: 100%;
   }
   .promo-banner {
     width: calc(100% - 32px);
@@ -1554,33 +1557,36 @@ body {
     left: auto;
   }
   .hero {
-    padding-left: 0;
-    padding-right: 0;
-    padding: 48px 0 120px;
-    min-height: 300px;
-  }
-  .hero-box {
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-top: 24px;
+    padding: 48px 0 180px;
+    min-height: 360px;
   }
   .hero-title {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.1;
+    letter-spacing: -2px;
+  }
+  .hero-title .navy {
+    display: inline;
   }
   .hero-inner {
-    margin-top: 80px;
+    margin-top: 260px;
   }
   .slant-divider {
-    height: 210px;
+    height: 180px;
   }
   :root {
-    --slant-height: 210px;
+    --slant-height: 180px;
   }
   .hero-box {
     width: 88%;
     left: 4vw;
     padding-left: 12px;
+  }
+  .hero-bubble {
+    top: 90px;
+    left: 4vw;
+    width: 180px;
+    font-size: 12px;
   }
   .brand-logo {
     height: 68px;
@@ -1598,11 +1604,6 @@ body {
   .hero-ctas {
     flex-direction: column;
     align-items: stretch;
-  }
-  .btn {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
   }
   .mockup {
     padding: 12px;
@@ -1683,29 +1684,35 @@ body {
     height: 64px;
   }
   .hero {
-    padding-top: 0;
-    padding-bottom: 120px;
-    min-height: 260px;
+    padding: 40px 0 180px;
+    min-height: 340px;
     background-position: top center;
     background-size: cover;
   }
   .hero-title {
-    font-size: 28px;
+    font-size: 36px;
     line-height: 1.12;
+    letter-spacing: -2px;
   }
   .hero-inner {
-    margin-top: 36px;
+    margin-top: 240px;
   }
   .slant-divider {
-    height: 225px;
+    height: 180px;
   }
   :root {
-    --slant-height: 225px;
+    --slant-height: 180px;
   }
   .hero-box {
-    position: static;
-    padding: 16px 16px 24px 16px;
-    width: 100%;
+    width: 90%;
+    left: 4vw;
+    padding-left: 12px;
+  }
+  .hero-bubble {
+    top: 85px;
+    left: 4vw;
+    width: 160px;
+    font-size: 11px;
   }
   .promo-banner {
     position: static;
@@ -1750,24 +1757,35 @@ body {
     height: 28px;
   }
   .hero {
-    padding: 32px 0 80px;
-    min-height: 256px;
-    background-size: 200%;
+    padding: 32px 0 180px;
+    min-height: 320px;
+    background-size: cover;
   }
   .hero-title {
-    font-size: 24px;
+    font-size: 28px;
   }
   .hero-sub {
     font-size: 14px;
   }
   .hero-inner {
-    margin-top: 24px;
+    margin-top: 220px;
+  }
+  .hero-box {
+    width: 92%;
+    left: 4vw;
+  }
+  .hero-bubble {
+    top: 50px;
+    left: 4vw;
+    width: 140px;
+    font-size: 10px;
+    padding: 4px;
   }
   .slant-divider {
-    height: 200px;
+    height: 180px;
   }
   :root {
-    --slant-height: 200px;
+    --slant-height: 180px;
   }
   .btn {
     padding: 10px 12px;
