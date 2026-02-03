@@ -2404,6 +2404,25 @@ body {
   .hero ~ section { padding-top: 160px; }
 }
 
+/* Move the 'computers' section up and bring all following sections up with it.
+   Adjust the value below to control how much higher the computers section sits. */
+.computers {
+  margin-top: -80px;
+}
+.computers ~ section {
+  margin-top: -80px;
+}
+
+@media (max-width: 480px) {
+  .computers { margin-top: -60px; }
+  .computers ~ section { margin-top: -60px; }
+}
+
+@media (max-width: 360px) {
+  .computers { margin-top: -40px; }
+  .computers ~ section { margin-top: -40px; }
+}
+
 /* ===================================================================
    18. ACCESSIBILITY - Respect Reduced Motion
 =================================================================== */
