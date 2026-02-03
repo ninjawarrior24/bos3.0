@@ -1202,6 +1202,11 @@ body {
   display: block;
 }
 
+/* ensure videos scale and preserve aspect for the NOS grid */
+.nos-video {
+  object-fit: cover;
+}
+
 .nos-video-logos {
   display: flex;
   gap: 24px;
@@ -1861,7 +1866,7 @@ body {
     min-height: 360px;
   }
   .hero-title {
-    font-size: 40px;
+    font-size: 60px;
     line-height: 1.1;
     letter-spacing: -2px;
   }
@@ -2039,7 +2044,7 @@ body {
     background-size: cover;
   }
   .hero-title {
-    font-size: 36px;
+    font-size: 50px;
     line-height: 1.12;
     letter-spacing: -2px;
   }
@@ -2180,7 +2185,7 @@ body {
     background-size: cover;
   }
   .hero-title {
-    font-size: 28px;
+    font-size: 50px;
   }
   .hero-sub {
     font-size: 14px;
