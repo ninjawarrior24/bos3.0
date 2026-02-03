@@ -2,6 +2,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>BeOne Sports — Payments &amp; Platform</title>
+	<!-- Google Fonts: Inter Tight (condensed variant) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&display=swap" rel="stylesheet">
 	<!-- Load critical CSS -->
 	<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="css/style.css"></noscript>
@@ -122,6 +126,12 @@
 </picture>
 </picture>
 			</a>
+			<nav class="desktop-nav">
+				<a href="#product">Product</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#docs">Docs</a>
+				<a href="#company">Company</a>
+			</nav>
 			<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
 				<span></span>
 				<span></span>
@@ -139,7 +149,7 @@
 	<!-- Main content begins -->
 	<main>
 		<section class="hero">
-			<div class="hero-bubble">Winter discount 25% <br> Join now</div>
+			<div class="hero-bubble">25% winter discount<br>Start now <span class="bubble-arrow">></span></div>
 			<div class="container hero-inner">
 				<div class="hero-box">
 					<h1 class="hero-title">
@@ -192,20 +202,7 @@
 					</div>
 					<div class="drake-content">
 						<div class="drake-subtitle-wrapper">
-							<h3 class="drake-subtitle" aria-label="165+ Million">
-								<span class="drake-char" data-char="1">1</span>
-								<span class="drake-char" data-char="6">6</span>
-								<span class="drake-char" data-char="5">5</span>
-								<span class="drake-char" data-char="+">+</span>
-								<br>
-								<span class="drake-char" data-char="M">M</span>
-								<span class="drake-char" data-char="i">i</span>
-								<span class="drake-char" data-char="l">l</span>
-								<span class="drake-char" data-char="l">l</span>
-								<span class="drake-char" data-char="i">i</span>
-								<span class="drake-char" data-char="o">o</span>
-								<span class="drake-char" data-char="n">n</span>
-							</h3>
+							<img src="images/165mill.png" alt="165+ Million" class="drake-million-img" loading="lazy" decoding="async">
 							<div class="drake-copy-box">
 								<p class="drake-copy">Sports-specific data<br>points from elite<br>athletes</p>
 							</div>
@@ -278,118 +275,36 @@
 				<div class="nos-cta">
 					<a class="btn btn-primary" href="#">Join BeOne</a>
 				</div>
-			</div>
-		</section>
 
-		<section id="videos" class="videos">
-			<div class="container">
-				<h2 class="section-title">Videos</h2>
-				<p class="section-lead">Watch demos, highlights, and analysis clips.</p>
-
-				<div class="videos-grid">
-					<div class="videos-media">
-						<video class="animation-video" autoplay muted loop playsinline>
+				<div class="nos-videos-grid">
+					<div class="nos-video-item">
+						<video class="nos-video" autoplay muted loop playsinline>
 							<source src="videos/Animation1.webm" type="video/webm">
 							Your browser does not support the video tag.
 						</video>
 					</div>
-					<div class="videos-player">
-												<video class="video-player" preload="metadata" playsinline autoplay muted loop poster="images/WebApp%20Landing.png">
-													<source src="videos/broadjump%20video.mp4" type="video/mp4">
-													Your browser does not support the video tag.
-												</video>
+					<div class="nos-video-item">
+						<video class="nos-video" preload="metadata" playsinline autoplay muted loop poster="images/WebApp%20Landing.png">
+							<source src="videos/broadjump%20video.webm" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 					</div>
 				</div>
 
-					<div class="video-logos">
-						<a href="https://youtube.com/watch?v=tjWoej2fKrA&feature=youtu.be" target="_blank" rel="noopener noreferrer">
-						<picture>
-<source type="image/avif" srcset="images/football.avif">
-<source type="image/webp" srcset="images/football.webp">
-<picture>
-<source type="image/avif" srcset="images/football.avif">
-<source type="image/webp" srcset="images/football.webp">
-<picture>
-<source type="image/avif" srcset="images/football.avif">
-<source type="image/webp" srcset="images/football.webp">
-<picture>
-<source type="image/avif" srcset="images/football.avif">
-<source type="image/webp" srcset="images/football.webp">
-<picture>
-<source type="image/avif" srcset="images/football.avif">
-<source type="image/webp" srcset="images/football.webp">
-<picture>
-<source type="image/avif" srcset="images/football.avif">
-<source type="image/webp" srcset="images/football.webp">
-<img src="images/football.png" alt="Football" class="logo" loading="lazy" decoding="async">
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
-						</a>
-						<a href="https://youtu.be/WMg5PxdG2EY" target="_blank" rel="noopener noreferrer">
-						<picture>
-<source type="image/webp" srcset="images/volleyball.webp">
-<img src="images/volleyball.png" alt="Volleyball" class="logo" loading="lazy" decoding="async">
-</picture>
-						</a>
-						<a href="https://youtu.be/mPQugqPbdsU" target="_blank" rel="noopener noreferrer">
-						<picture>
-<source type="image/avif" srcset="images/soccer.avif">
-<source type="image/webp" srcset="images/soccer.webp">
-<picture>
-<source type="image/avif" srcset="images/soccer.avif">
-<source type="image/webp" srcset="images/soccer.webp">
-<picture>
-<source type="image/avif" srcset="images/soccer.avif">
-<source type="image/webp" srcset="images/soccer.webp">
-<picture>
-<source type="image/avif" srcset="images/soccer.avif">
-<source type="image/webp" srcset="images/soccer.webp">
-<picture>
-<source type="image/avif" srcset="images/soccer.avif">
-<source type="image/webp" srcset="images/soccer.webp">
-<picture>
-<source type="image/avif" srcset="images/soccer.avif">
-<source type="image/webp" srcset="images/soccer.webp">
-<img src="images/soccer.png" alt="Soccer" class="logo" loading="lazy" decoding="async">
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
-						</a>
-						<a href="https://youtu.be/szJvklLBwpA" target="_blank" rel="noopener noreferrer">
-						<picture>
-<source type="image/avif" srcset="images/baseball.avif">
-<source type="image/webp" srcset="images/baseball.webp">
-<picture>
-<source type="image/avif" srcset="images/baseball.avif">
-<source type="image/webp" srcset="images/baseball.webp">
-<picture>
-<source type="image/avif" srcset="images/baseball.avif">
-<source type="image/webp" srcset="images/baseball.webp">
-<picture>
-<source type="image/avif" srcset="images/baseball.avif">
-<source type="image/webp" srcset="images/baseball.webp">
-<picture>
-<source type="image/avif" srcset="images/baseball.avif">
-<source type="image/webp" srcset="images/baseball.webp">
-<picture>
-<source type="image/avif" srcset="images/baseball.avif">
-<source type="image/webp" srcset="images/baseball.webp">
-<img src="images/baseball.png" alt="Baseball" class="logo" loading="lazy" decoding="async">
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
-</picture>
-						</a>
-					</div>
+				<div class="nos-video-logos">
+					<a href="https://youtube.com/watch?v=tjWoej2fKrA&feature=youtu.be" target="_blank" rel="noopener noreferrer">
+						<img src="images/football.png" alt="Football" class="nos-logo" loading="lazy" decoding="async">
+					</a>
+					<a href="https://youtu.be/WMg5PxdG2EY" target="_blank" rel="noopener noreferrer">
+						<img src="images/volleyball.png" alt="Volleyball" class="nos-logo" loading="lazy" decoding="async">
+					</a>
+					<a href="https://youtu.be/mPQugqPbdsU" target="_blank" rel="noopener noreferrer">
+						<img src="images/soccer.png" alt="Soccer" class="nos-logo" loading="lazy" decoding="async">
+					</a>
+					<a href="https://youtu.be/szJvklLBwpA" target="_blank" rel="noopener noreferrer">
+						<img src="images/baseball.png" alt="Baseball" class="nos-logo" loading="lazy" decoding="async">
+					</a>
+				</div>
 			</div>
 		</section>
 
@@ -425,7 +340,7 @@
 </picture>
 </picture>
 </picture>
-						<p>Athletes</p>
+						
 					</div>
 					<div class="gs-icon">
 						<picture>
@@ -453,7 +368,7 @@
 </picture>
 </picture>
 </picture>
-						<p>Coaches</p>
+						
 					</div>
 				</div>
 
