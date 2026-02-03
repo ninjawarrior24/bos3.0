@@ -2244,6 +2244,166 @@ body {
   }
 }
 
+/* HERO SIZE OVERRIDES: increase hero title size per user request */
+.hero-title {
+  font-size: 80px;
+  line-height: 1.02;
+}
+
+@media (max-width: 1400px) {
+  .hero-title { font-size: 76px; }
+}
+
+@media (max-width: 1000px) {
+  .hero-title { font-size: 72px; }
+}
+
+@media (max-width: 900px) {
+  .hero-title { font-size: 68px; }
+}
+
+@media (max-width: 800px) {
+  .hero-title { font-size: 64px; }
+}
+
+@media (max-width: 700px) {
+  .hero-title { font-size: 60px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 56px; }
+}
+
+@media (max-width: 360px) {
+  .hero-title { font-size: 52px; }
+}
+
+/* HERO LAYOUT ADJUSTMENTS: increase top spacing and slant to accommodate larger titles */
+.hero {
+  padding-top: 120px; /* more breathing room above the hero */
+}
+.hero-inner {
+  margin-top: 460px; /* base increase to keep content visually balanced */
+}
+
+@media (max-width: 1400px) {
+  .hero { padding-top: 110px; }
+  .hero-inner { margin-top: 360px; }
+  .slant-divider { height: 260px; }
+  :root { --slant-height: 260px; }
+}
+
+@media (max-width: 1000px) {
+  .hero { padding-top: 100px; }
+  .hero-inner { margin-top: 320px; }
+  .slant-divider { height: 220px; }
+  :root { --slant-height: 220px; }
+}
+
+@media (max-width: 900px) {
+  .hero { padding-top: 96px; }
+  .hero-inner { margin-top: 320px; }
+  .slant-divider { height: 200px; }
+  :root { --slant-height: 200px; }
+}
+
+@media (max-width: 800px) {
+  .hero { padding-top: 92px; }
+  .hero-inner { margin-top: 320px; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding-top: 80px; }
+  .hero-inner { margin-top: 300px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding-top: 72px; }
+  .hero-inner { margin-top: 280px; }
+  .slant-divider { height: 200px; }
+  :root { --slant-height: 200px; }
+  /* push hero box down to avoid bubble overlapping the title */
+  /* move hero box and bubble slightly higher (upward) */
+  .hero-box { margin-top: 130px; }
+  .hero-bubble { top: 96px; }
+  /* move slant down a bit */
+  .hero::after { transform: translateY(-18px); }
+}
+
+@media (max-width: 360px) {
+  .hero { padding-top: 64px; }
+  .hero-inner { margin-top: 260px; }
+  /* move hero box and bubble slightly higher on very small screens */
+  .hero-box { margin-top: 150px; }
+  .hero-bubble { top: 110px; }
+  .slant-divider { height: 180px; }
+  :root { --slant-height: 180px; }
+  .hero::after { transform: translateY(-28px); }
+}
+
+/* MOBILE SLANT ADJUSTMENTS: move slant up on smaller screens and reduce height */
+@media (max-width: 480px) {
+  .hero::after {
+    transform: translateY(20px);
+  }
+  .slant-divider { height: 180px; }
+  :root { --slant-height: 180px; }
+}
+
+@media (max-width: 360px) {
+  .hero::after {
+    transform: translateY(10px);
+  }
+  .slant-divider { height: 160px; }
+  :root { --slant-height: 160px; }
+}
+
+/* For very large screens, move the slant up and reduce its visual offset */
+@media (min-width: 1401px) {
+  .slant-divider {
+    height: 220px;
+  }
+  :root {
+    --slant-height: 220px;
+  }
+  .hero::after {
+    transform: translateY(-35px);
+  }
+}
+
+/* Ensure sections after the hero are pushed down so the slant/bubble don't overlap
+   This adds extra top spacing to all sibling sections following `.hero` and is
+   responsive to keep proportions on smaller screens. */
+.hero + section,
+.hero ~ section {
+  padding-top: 120px; /* base offset to clear hero */
+}
+
+@media (max-width: 1400px) {
+  .hero + section,
+  .hero ~ section { padding-top: 100px; }
+}
+
+@media (max-width: 1000px) {
+  .hero + section,
+  .hero ~ section { padding-top: 88px; }
+}
+
+@media (max-width: 900px) {
+  .hero + section,
+  .hero ~ section { padding-top: 76px; }
+}
+
+@media (max-width: 480px) {
+  .hero + section,
+  .hero ~ section { padding-top: 140px; }
+}
+
+@media (max-width: 360px) {
+  .hero + section,
+  .hero ~ section { padding-top: 160px; }
+}
+
 /* ===================================================================
    18. ACCESSIBILITY - Respect Reduced Motion
 =================================================================== */
