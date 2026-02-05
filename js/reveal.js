@@ -21,11 +21,19 @@
     // Filter out hidden elements and cap to avoid heavy work on very large pages
     nodes = nodes.filter(el => el.offsetParent !== null).slice(0, 800);
 
-    // Add base class and alternate direction (left/right) in document order
+    // Add base class and direction. On mobile force from-below (bottom-up),
+    // on desktop keep the left/right alternation for variety.
+    const isMobileInitial = window.innerWidth < 768;
     nodes.forEach((el, i) => {
       el.classList.add('reveal');
-      // even = from-left, odd = from-right
-      el.classList.add((i % 2) === 0 ? 'from-left' : 'from-right');
+      if(isMobileInitial) {
+        el.classList.add('from-below');
+        el.classList.remove('from-left','from-right');
+      } else {
+        // even = from-left, odd = from-right
+        el.classList.add((i % 2) === 0 ? 'from-left' : 'from-right');
+        el.classList.remove('from-below');
+      }
     });
 
     // Use a single observer for efficiency
