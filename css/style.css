@@ -613,6 +613,36 @@ body {
   object-fit: contain;
 }
 
+/* Video variant matching the webapp image sizing for visual consistency */
+.webapplanding-video {
+  display: block;
+  margin: 20px auto;
+  /* slightly smaller than the large hero image so the animation reads as a media inset */
+  max-width: 720px;
+  width: 75%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Desktop: make the animation more compact on larger screens */
+@media (min-width: 901px) {
+  .webapplanding-video {
+    max-width: 560px;
+    width: 48%;
+  }
+}
+
+/* Replacement image used in the NOS grid when swapping from video */
+.nos-replacement-image {
+  width: 80%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
 /* ===================================================================
    7. AMS SECTION
 =================================================================== */
@@ -1189,6 +1219,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 40px;
+  justify-items: center;
 }
 
 .nos-video-item {
