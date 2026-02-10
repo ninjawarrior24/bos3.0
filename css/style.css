@@ -851,7 +851,7 @@ body {
   position: relative;
   overflow: visible;
   margin-top: 24px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   perspective: 1200px;
@@ -863,10 +863,10 @@ body {
 .carousel-track {
   position: relative;
   transition: transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  height: 360px;
+  height: 520px;
   transform-style: preserve-3d;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -874,9 +874,9 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 60%;
-  max-width: 820px;
-  height: 360px;
+  width: 70%;
+  max-width: 1100px;
+  height: 520px;
   border-radius: 12px;
   transition: transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 300ms;
   opacity: 0.75;
@@ -884,6 +884,7 @@ body {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   overflow: hidden;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -893,7 +894,8 @@ body {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   display: block;
 }
 
@@ -1615,7 +1617,11 @@ body {
     padding: 8px;
   }
   .carousel-item {
-    height: 240px;
+    height: 320px;
+    width: 92%;
+    max-width: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .drakedive .section-title {
     font-size: 40px;
@@ -2475,6 +2481,24 @@ body {
 @media (max-width: 360px) {
   .computers { margin-top: -40px; }
   .computers ~ section { margin-top: -40px; }
+}
+
+/* Mobile carousel adjustments (improve image visibility on small screens) */
+@media (max-width: 1000px) {
+  .carousel-track { height: auto; padding: 10px; }
+  .carousel-item { height: 320px; width: 92%; max-width: none; left:50%; transform: translate(-50%, -50%); }
+  .carousel-item img { width: auto; max-width: 100%; height: 100%; object-fit: contain; object-position: center center; }
+}
+
+@media (max-width: 480px) {
+  .carousel-track { padding: 6px; }
+  .carousel-item { height: 300px; width: 94%; }
+  .carousel-item img { height: 100%; width: auto; max-width: 100%; object-fit: contain; }
+}
+
+@media (max-width: 360px) {
+  .carousel-item { height: 260px; width: 96%; }
+  .carousel-item img { max-height: 100%; }
 }
 
 /* ===================================================================
