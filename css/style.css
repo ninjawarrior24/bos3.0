@@ -1215,13 +1215,14 @@ body {
   transform: translateY(-2px);
 }
 
-/* NOS Section Videos */
 .nos-videos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* make the primary animation significantly larger */
+  grid-template-columns: 6fr 1fr; /* wider primary column */
   gap: 24px;
   margin-top: 40px;
   justify-items: center;
+  align-items: start; /* keep videos aligned at top */
 }
 
 .nos-video-item {
@@ -1259,11 +1260,26 @@ body {
   border-radius: 12px;
   background: #000;
   display: block;
+  object-fit: cover;
 }
 
-/* ensure videos scale and preserve aspect for the NOS grid */
-.nos-video {
-  object-fit: cover;
+/* Desktop: make animation bigger and broadjump smaller while staying aligned */
+@media (min-width: 901px) {
+  .nos-videos-grid {
+    grid-template-columns: 6fr 1fr; /* wider primary column on desktop */
+  }
+  .nos-videos-grid .nos-video:first-child {
+    height: 820px;    /* increase primary animation height */
+    max-height: 86vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  .nos-videos-grid .nos-video:last-child {
+    height: 420px;    /* reduce broadjump height */
+    max-height: 48vh;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .nos-video-logos {
