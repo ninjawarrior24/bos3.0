@@ -13,7 +13,7 @@
 	<!-- Preload critical images used in the hero and social previews -->
 	<link rel="preload" as="image" href="images/bluyel.png">
 	<link rel="preload" as="image" href="images/WebApp%20Landing.png">
-	<link rel="preload" as="image" href="images/Blackotl_Beonesports.png">
+	<link rel="preload" as="image" href="images/BlackOTL_BeONESports.png">
 	<link rel="preload" as="image" href="images/Computer2.png">
 
 	<!-- SEO: concise description, robots and canonical -->
@@ -86,8 +86,29 @@
 	  "@type": "Organization",
 	  "name": "BeOne Sports",
 	  "url": "/",
-	"logo": "images/Blackotl_Beonesports.png"
+	"logo": "images/BlackOTL_BeONESports.png"
 	}
+	</script>
+	<!-- Ensure autoplayed videos are muted/looped and attempt playback (with interaction fallback) -->
+	<script>
+	  (function(){
+	    function initAutoPlay(){
+	      const vids = Array.from(document.querySelectorAll('video'));
+	      vids.forEach(v=>{
+	        try{ v.muted = true; }catch(e){}
+	        v.loop = true;
+	        v.playsInline = true;
+	        if (!v.hasAttribute('preload')) v.setAttribute('preload','auto');
+	        const p = v.play();
+	        if (p && p.catch) p.catch(()=>{});
+	      });
+	      // If autoplay blocked, try again on first user interaction
+	      function tryPlayAll(){ vids.forEach(v=>v.play().catch(()=>{})); window.removeEventListener('touchstart', tryPlayAll); window.removeEventListener('click', tryPlayAll); }
+	      window.addEventListener('touchstart', tryPlayAll, {passive:true});
+	      window.addEventListener('click', tryPlayAll, {once:true});
+	    }
+	    if (document.readyState === 'complete' || document.readyState === 'interactive') initAutoPlay(); else document.addEventListener('DOMContentLoaded', initAutoPlay);
+	  })();
 	</script>
 
 </head>
@@ -105,7 +126,7 @@
 	<header class="nav">
 		<div class="container nav-inner">
 			<a class="brand" href="./">
-				<img src="images/Blackotl_Beonesports.png" alt="BeOne Sports" class="brand-logo" decoding="async">
+				<img src="images/BlackOTL_BeONESports.png" alt="BeOne Sports" class="brand-logo" decoding="async">
 			</a>
 			<nav class="desktop-nav">
 				<a href="./">Home</a>
@@ -178,7 +199,7 @@
 
 				<div class="computers-media">
 					<div class="webapp-wrap">
-						<video class="webapplanding-video nos-video" autoplay muted loop playsinline poster="images/WebApp%20Landing.png">
+						<video class="webapplanding-video nos-video" autoplay muted loop playsinline preload="auto" poster="images/WebApp%20Landing.png">
 							<source src="videos/Animation2.webm" type="video/webm">
 							<source src="videos/Animation2.mp4" type="video/mp4">
 							Your browser does not support the video tag.
@@ -195,13 +216,13 @@
 				<div class="ams-media">
 					<div class="nos-videos-grid">
 						<div class="nos-video-item">
-							<video class="nos-video" autoplay muted loop playsinline>
+							<video class="nos-video" autoplay muted loop playsinline preload="auto">
 								<source src="videos/Animation1.webm" type="video/webm">
 								Your browser does not support the video tag.
 							</video>
 						</div>
 						<div class="nos-video-item">
-							<video class="nos-video" preload="metadata" playsinline autoplay muted loop poster="images/WebApp%20Landing.png" controls>
+							<video class="nos-video" preload="auto" playsinline autoplay muted loop poster="images/WebApp%20Landing.png">
 								<source src="videos/broadjump.webm" type="video/webm">
 								<source src="videos/broadjump.mp4" type="video/mp4">
 								Your browser does not support the video tag.
@@ -326,7 +347,7 @@
 					</ul>
 					<a class="btn hp-cta" href="#">Join BeOne</a>
 					<div class="hp-logo">
-						<img src="images/Blackotl_Beonesports.png" alt="BeOne Sports logo" loading="lazy" decoding="async">
+						<img src="images/BlackOTL_BeONESports.png" alt="BeOne Sports logo" loading="lazy" decoding="async">
 					</div>
 				</div>
 			</div>
