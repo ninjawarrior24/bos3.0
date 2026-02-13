@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — BeOne Sports</title>
+  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./">
+        <img src="images/BlackOTL_BeONESports.png" alt="BeOne Sports" class="brand-logo" decoding="async">
+      </a>
+      <nav class="desktop-nav">
+        <a href="./">Home</a>
+        <a href="https://portal.beonesports.com/auth/login" target="_blank" rel="noopener noreferrer">Get BeONE</a>
+        <a href="contact.html" aria-current="page">Contact Sales</a>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="hamburger-menu" id="hamburgerMenu">
+      <a href="./">Home</a>
+      <a href="https://portal.beonesports.com/auth/login" target="_blank" rel="noopener noreferrer">Get BeONE</a>
+      <a href="contact.html">Contact Sales</a>
+    </nav>
+  </header>
+
+  <main class="container" style="padding:3rem 1rem 3rem; padding-top:140px; max-width:900px;margin:0 auto;">
+    <h1>Contact Sales</h1>
+    
+
+    <form id="contactForm" action="mailto:info@beonesports.com,jasonbell@beonesports.com" method="post" enctype="text/plain" aria-label="Contact Sales form">
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" required placeholder="Your name" style="width:100%;margin-bottom:0.5rem;">
+
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" required placeholder="you@company.com" style="width:100%;margin-bottom:0.5rem;">
+
+      <label for="org">Organization (optional)</label>
+      <input id="org" name="organization" type="text" placeholder="Team or club name" style="width:100%;margin-bottom:0.5rem;">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="How can we help?" style="width:100%;margin-bottom:0.5rem;"></textarea>
+
+      <button type="submit" class="btn btn-primary">Send message</button>
+    </form>
+
+    <p style="margin-top:1rem;color:#666;font-size:0.9rem;">Note: This form uses a mail client fallback. For reliable form handling, add a server endpoint or a service like Formspree.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BeOne Sports</div>
+      <div class="foot-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());</script>
+  <script>
+    (function(){
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+      form.addEventListener('submit', function(e){
+        // Build mailto with both recipients and include form fields in the body
+        try{
+          e.preventDefault();
+          const to = 'info@beonesports.com,jasonbell@beonesports.com';
+          const name = encodeURIComponent((document.getElementById('name')||{}).value || '');
+          const email = encodeURIComponent((document.getElementById('email')||{}).value || '');
+          const org = encodeURIComponent((document.getElementById('org')||{}).value || '');
+          const message = encodeURIComponent((document.getElementById('message')||{}).value || '');
+          const subject = encodeURIComponent('Contact Sales — ' + (name || email || 'Website Inquiry'));
+          const bodyLines = [
+            'Name: ' + decodeURIComponent(name),
+            'Email: ' + decodeURIComponent(email),
+            'Organization: ' + decodeURIComponent(org),
+            '',
+            'Message:',
+            decodeURIComponent(message)
+          ];
+          const body = encodeURIComponent(bodyLines.join('\n'));
+          // Use window.location to open the user's mail client with prefilled fields
+          window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+        }catch(err){
+          // Fallback: allow normal form submission (mailto action attribute)
+          return true;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

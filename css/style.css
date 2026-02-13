@@ -108,19 +108,19 @@ body {
 }
 
 .desktop-nav a {
-  color: #ffffff;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   transition: all 0.2s ease;
   padding: 6px 12px;
-  background: rgba(245, 184, 0, 0.5);
+  background: transparent;
   border-radius: 6px;
 }
 
 .desktop-nav a:hover {
-  color: #000000;
-  background: #F5B800;
+  color: #ffffff;
+  background: var(--accent);
 }
 
 @media (min-width: 901px) {
@@ -207,7 +207,7 @@ body {
 .hamburger-menu a {
   display: block;
   padding: 12px 16px;
-  color: #0b1220;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
